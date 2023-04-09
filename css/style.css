@@ -1,0 +1,260 @@
+.null{
+    height: 50px;
+}
+
+.center{
+    text-align: center;
+}
+
+.clear{
+    clear: both;
+}
+
+.header__nav {
+position: absolute;
+right: 0;
+left: 0;
+top: 0;
+width: 100%;
+height: 100vh;
+transform: translateX(100%);
+background-color: #999;
+transition: ease .4s;
+}
+
+/*ハンバーガーメニュー*/
+.header__hamburger{
+    width: 48px;
+    height: 100%;
+}
+
+.hamburger{
+    margin: 20px 5px;
+    float: right;
+    background-color: transparent;/*buttonタグデフォルトスタイルを打ち消し*/
+    border-color: transparent;/*buttonタグデフォルトスタイルを打ち消し*/
+    z-index: 999;
+}
+
+/*ハンバーガーメニューの線*/
+.hamburger span{
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: relative;
+    transition: ease .4s;/*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+    display: block;
+}
+
+.hamburger span:nth-child(1){
+    top: 0;
+    background-color: #fff;
+    height: 3px;
+}
+
+.hamburger span:nth-child(2){
+    margin: 8px 0;
+    background-color: #fff;
+    height: 3px;
+}
+
+.hamburger span:nth-child(3){
+    top: 0;
+    background-color: #fff;
+    height: 3px;
+}
+
+/*ハンバーガーメニュークリック後のスタイル*/
+.header__nav.active{
+    transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1){
+    top: 7px;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    top: -15px;
+    transform: rotate(-45deg);
+}
+
+.nav-items{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/*ナビのリンク*/
+.nav-items__item a{
+    color: yellow;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-items__item:last-child a{
+    margin-bottom: 0;
+}
+
+
+.pc_only{
+    display:none;
+}
+
+/*スマホ表示*/
+.pc_only{
+    display: none;
+}
+
+/*PC表示*/
+@media(min-width:768px){
+    .pc_only{
+        display: block;
+    }
+    .hamburger{
+        display: none;
+    }
+}
+
+header{
+    display: block;
+    height: 80px;
+    background:linear-gradient(#527e99,#88a5b7,#acbdc7);
+}
+
+.none_underline{
+    text-decoration: none;
+}
+
+.title-logo{
+    display: inline-block;
+    background-color: rgb(80, 80, 80);
+    color: yellow;
+    font-size: 200%;
+    padding: 5px 10px;
+    margin: 15px 10px;
+    float: left;
+}
+
+.header-content{
+    color: #000;
+}
+
+.header-list{
+    float: right;
+    margin: 20px 2% 0 0;
+}
+
+.header-list ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-list li {
+    float: left;
+    padding: 5px 10px;
+    background-color: yellow;
+    border-radius: 50px;
+    padding: 2px 10px;
+    margin: 2%;
+    white-space: nowrap;
+}
+
+.slideshow{
+    height:400px;
+    width: auto;
+    object-fit: cover;
+}
+
+.reserve_button{
+    margin: 10px 0;
+    height: 60px;
+    width: 200px;
+    border-radius: 30px;
+    font-size: 150%;
+    background-color: #FF8C00;
+}
+
+.reserve_button__text{
+    text-align: center;
+    color: #fff;
+}
+
+.roomIntroduction{
+    font-size: 200%;
+    margin: 10px 0 5px 2%;
+}
+
+.roomIntroduction-img{
+    margin: 10px;
+    float: right;
+    height: 40%;
+    width: 40%;
+}
+
+.roomIntroduction-title{
+    display: inline-block;
+    margin-left: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.roomIntroduction-button{
+    margin: 10px;
+    height: 45px;
+    width: 180px;
+    border-radius: 30px;
+    font-size: 100%;
+    background-color: #FF8C00;
+}
+
+.roomIntroduction-button__text{
+    text-align: center;
+    color: #fff;
+}
+
+.roomIntroduction__ul{
+    list-style: disc;
+    margin-left: 40px;
+}
+
+.recommended{
+    margin: 10px;
+}
+
+.recommended p{
+    color: red;
+    font-weight: bold;
+}
+
+.price{
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.Div__roomIntroduction-button{
+    position:relative;
+    margin: 30px 20px;
+}
+
+.roomIntroduction-button__p{
+    position: absolute;
+    top: -20px;
+    left: 35px;
+}
+
+.img__small{
+    height: 300px;
+    width: auto;
+}
+
